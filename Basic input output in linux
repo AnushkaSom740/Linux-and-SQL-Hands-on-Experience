@@ -1,0 +1,7 @@
+analyst@3b08fc572c92:~$ echo Hello world 
+Hello world 
+analyst@3b08fc572c92:~$ expr 32 - 8
+24
+analyst@3b08fc572c92:~$ expr 3500 * 12
+4200 
+analyst@3b08fc572c92:~$ clear
