@@ -1,0 +1,41 @@
+analyst@13632f65c53b:~$ pwd
+/home/analyst
+analyst@13632f65c53b:~$ 
+analyst@13632f65c53b:~$ pwd
+/home/analyst
+analyst@13632f65c53b:~$ ls
+logs  projects  reports  temp
+analyst@13632f65c53b:~$ cd reports 
+analyst@13632f65c53b:~/reports$ ls
+users
+analyst@13632f65c53b:~/reports$ cd users
+analyst@13632f65c53b:~/reports/users$ ls
+Q1_added_users.txt  Q1_deleted_users.txt
+analyst@13632f65c53b:~/reports/users$ head Q1_added_users.txt
+employee_id  username  department
+1001         bmoreno   Marketing
+1026         apatel    Human Resources
+1041         cgriffin  Sales
+1104         mreed     Information Technology
+1177         aezra     Human Resources
+1188         noshiro   Finance
+analyst@13632f65c53b:~/reports/users$ cd ..
+analyst@13632f65c53b:~/reports$ cd logs
+-bash: cd: logs: No such file or directory
+analyst@13632f65c53b:~/reports$ cd ..
+analyst@13632f65c53b:~$ cd logs
+analyst@13632f65c53b:~/logs$ ls
+server_logs.txt
+analyst@13632f65c53b:~/logs$
+analyst@13632f65c53b:~/logs$ head server_logs.txt
+2022-09-28 13:55:55 info    User logged on successfully
+2022-09-28 13:56:22 error   The password is incorrect
+2022-09-28 13:56:48 warning The file storage is 75% full
+2022-09-28 15:55:55 info    User logged on successfully
+2022-09-28 15:56:22 error   The username is incorrect
+2022-09-28 15:56:48 warning The file storage is 90% full
+2022-09-28 16:55:55 info    User navigated to settings page
+2022-09-28 16:56:22 error   The password is incorrect
+2022-09-28 16:56:48 warning The current user’s password expires in 15 days
+2022-09-29 13:55:55 info    User logged on successfully
+analyst@13632f65c53b:~/logs$
