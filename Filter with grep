@@ -1,0 +1,45 @@
+analyst@daa977ad5d92:~$ cd analyst/logs
+-bash: cd: analyst/logs: No such file or directory
+analyst@daa977ad5d92:~$ pwd
+/home/analyst
+analyst@daa977ad5d92:~$ cd logs
+analyst@daa977ad5d92:~/logs$ grep server_logs.txt error
+grep: error: No such file or directory
+analyst@daa977ad5d92:~/logs$ grep error server_logs.txt
+2022-09-28 13:56:22 error   The password is incorrect
+2022-09-28 15:56:22 error   The username is incorrect
+2022-09-28 16:56:22 error   The password is incorrect
+2022-09-29 13:56:22 error   An unexpected error occurred
+2022-09-29 15:56:22 error   Unauthorized access
+2022-09-29 16:56:22 error   Unauthorized access
+analyst@daa977ad5d92:~/logs$ ls 
+server_logs.txt
+analyst@daa977ad5d92:~/logs$ cd ..
+analyst@daa977ad5d92:~$ cd users
+-bash: cd: users: No such file or directory
+analyst@daa977ad5d92:~$ pwd
+/home/analyst
+analyst@daa977ad5d92:~$ cd reports
+analyst@daa977ad5d92:~/reports$ cd users
+analyst@daa977ad5d92:~/reports/users$ ls
+Q1_access.txt         Q2_added_users.txt    Q3_deleted_users.txt
+Q1_added_users.txt    Q2_deleted_users.txt  Q4_access.txt
+Q1_deleted_users.txt  Q3_access.txt         Q4_added_users.txt
+Q2_access.txt         Q3_added_users.txt    Q4_deleted_users.txt
+analyst@daa977ad5d92:~/reports/users$ ls | grep Q1
+Q1_access.txt
+Q1_added_users.txt
+Q1_deleted_users.txt
+analyst@daa977ad5d92:~/reports/users$
+analyst@daa977ad5d92:~/reports/users$ ls | grep access
+Q1_access.txt
+Q2_access.txt
+Q3_access.txt
+Q4_access.txt
+analyst@daa977ad5d92:~/reports/users$ grep jhill Q2_deleted_users.txt
+1025         jhill     Sales
+analyst@daa977ad5d92:~/reports/users$ grep Human Resources Q4_added_users.txt
+grep: Resources: No such file or directory
+Q4_added_users.txt:1151         sshah     Human Resources
+Q4_added_users.txt:1145         msosa     Human Resources
+analyst@daa977ad5d92:~/reports/users$
