@@ -1,0 +1,24 @@
+nalyst@f1ac0e5809e7:~$ sudo useradd researcher9
+analyst@f1ac0e5809e7:~$ sudo usermod -g research_team researcher9
+analyst@f1ac0e5809e7:~$ cd researcher2
+-bash: cd: researcher2: No such file or directory
+analyst@f1ac0e5809e7:~$ ls
+analyst@f1ac0e5809e7:~$ pwd
+/home/analyst
+analyst@f1ac0e5809e7:~$ cd..
+-bash: cd..: command not found
+analyst@f1ac0e5809e7:~$ cd ..
+analyst@f1ac0e5809e7:/home$ ls
+analyst  researcher2  student
+analyst@f1ac0e5809e7:/home$ cd researcher2
+analyst@f1ac0e5809e7:/home/researcher2$ cd projects
+analyst@f1ac0e5809e7:/home/researcher2/projects$ chown researcher9 project.txt
+chown: cannot access 'project.txt': No such file or directory
+analyst@f1ac0e5809e7:/home/researcher2/projects$ chown researcher9 project.txt_rchown: cannot access 'project.txt_r': No such file or directory
+analyst@f1ac0e5809e7:/home/researcher2/projects$ chown researcher9 project_r.txtchown: changing ownership of 'project_r.txt': Operation not permitted
+analyst@f1ac0e5809e7:/home/researcher2/projects$ sudo chown researcher9 project_r.txt
+analyst@f1ac0e5809e7:/home/researcher2/projects$ sudo usermod -a -G sales_team researcher9
+analyst@f1ac0e5809e7:/home/researcher2/projects$ sudo userdel researcher9
+userdel: group researcher9 not removed because it is not the primary group of user researcher9.
+analyst@f1ac0e5809e7:/home/researcher2/projects$ sudo groupdel researcher9
+analyst@f1ac0e5809e7:/home/researcher2/projects$
