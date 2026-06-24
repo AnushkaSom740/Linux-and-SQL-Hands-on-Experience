@@ -1,0 +1,27 @@
+analyst@ff53080c5330:~$ ls 
+notes  reports  temp
+analyst@ff53080c5330:~$ mkdir logs
+analyst@ff53080c5330:~$ ls
+logs  notes  reports  temp
+analyst@ff53080c5330:~$ rmdir temp
+analyst@ff53080c5330:~$ ls
+logs  notes  reports
+analyst@ff53080c5330:~$ mv Q3.txt /home/analyst/reports
+mv: cannot stat 'Q3.txt': No such file or directory
+analyst@ff53080c5330:~$ mv Q3patches.txt /home/analyst/reports
+mv: cannot stat 'Q3patches.txt': No such file or directory
+analyst@ff53080c5330:~$ cd notes
+analyst@ff53080c5330:~/notes$ mv Q3patches.txt /home/analyst/reports
+analyst@ff53080c5330:~/notes$ cd ..
+analyst@ff53080c5330:~$ cd reports
+analyst@ff53080c5330:~/reports$ ls
+Q1patches.txt  Q2patches.txt  Q3patches.txt
+analyst@ff53080c5330:~/reports$ cd ..
+analyst@ff53080c5330:~$ cd notes
+analyst@ff53080c5330:~/notes$ rm tempnotes.txt
+analyst@ff53080c5330:~/notes$ ls
+analyst@ff53080c5330:~/notes$ ls
+analyst@ff53080c5330:~/notes$ touch tasks.txt
+analyst@ff53080c5330:~/notes$ ls
+tasks.txt
+analyst@ff53080c5330:~/notes$ 
